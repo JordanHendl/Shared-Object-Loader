@@ -12,6 +12,9 @@ typedef karma::io::Symbol<void, unsigned       > VoidFunction     ; // An alias 
 // The object loader itself.
 karma::io::ObjectLoader loader ;
 
+// Load the .DLL/.SO
+loader.load( "shared.dll" ) ;
+
 // The symbols to load.
 UnsignedFunction function_one   = loader.symbol( "symbol_one"   ) ;
 CStringFunction  function_two   = loader.symbol( "symbol_two"   ) ;
